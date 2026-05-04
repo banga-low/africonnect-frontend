@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import SupplierSignup from './SupplierSignup';
 
-function App() {
+function Home() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -14,8 +16,8 @@ function App() {
       <h1>SIGNUP FORM</h1>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
-          <input 
-            type="email" 
+          <input
+            type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -24,8 +26,8 @@ function App() {
           />
         </div>
         <div style={{ marginBottom: '15px' }}>
-          <input 
-            type="password" 
+          <input
+            type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -33,14 +35,26 @@ function App() {
             required
           />
         </div>
-        <button 
+        <button
           type="submit"
           style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none' }}
         >
           Sign Up
         </button>
       </form>
+      <p style={{ marginTop: '20px' }}>
+        <Link to="/supplier-signup">Become a supplier? Sign up</Link>
+      </p>
     </div>
+  );
+}function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/supplier-signup" element={<SupplierSignup />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

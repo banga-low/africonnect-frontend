@@ -5,9 +5,11 @@
   --text-dark: #000000;
 }
 
+/* Base Container */
 .landing-container {
   font-family: 'Inter', sans-serif;
   padding: 0 5%;
+  background-color: #fff;
 }
 
 /* Navbar */
@@ -53,7 +55,14 @@
   cursor: pointer;
 }
 
-/* Hero & Footer Typography */
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  gap: 40px;
+}
+
 .hero-title {
   font-size: 2.8rem;
   line-height: 1.2;
@@ -68,15 +77,6 @@
   color: #333;
 }
 
-/* Hero Section Layout */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  padding: 80px 0;
-  gap: 40px;
-}
-
-/* Shared Button Container Logic (Fixes your spacing) */
 .hero-btns, .footer-btns {
   display: flex;
   gap: 20px; 
@@ -93,22 +93,23 @@
   cursor: pointer;
 }
 
-/* Image Placeholders */
+/* THE FIX: Spacing for Placeholders */
+.hero-images, .footer-images {
+  display: flex;
+  flex-direction: column; /* Stacked */
+  align-items: flex-end;
+  gap: 40px; /* This creates the vertical space you asked for */
+}
+
 .placeholder-img {
   background-color: var(--brand-green);
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .tall-green { width: 180px; height: 300px; }
-.wide-green { width: 300px; height: 180px; margin-top: -50px; }
+.wide-green { width: 300px; height: 180px; } /* Removed negative margin */
 
-.hero-images, .footer-images {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-/* Statistics Section */
+/* Statistics */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -125,13 +126,7 @@
   font-weight: bold;
 }
 
-/* Materials List */
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin: 40px 0 20px 0;
-}
-
+/* Materials */
 .material-item {
   background-color: #e0e0e0;
   display: flex;
@@ -149,31 +144,7 @@
   background-color: var(--brand-blue);
 }
 
-/* Info Sections (About & Why Choose Us) */
-.info-section {
-  padding: 40px 0;
-}
-
-.check-list {
-  list-style: none;
-  padding: 0;
-}
-
-.check-list li::before {
-  content: "●";
-  color: var(--brand-green);
-  display: inline-block; 
-  width: 1em;
-  margin-left: -1em;
-}
-
-.check-list li {
-  margin: 15px 0;
-  font-size: 1.1rem;
-  padding-left: 1.5em;
-}
-
-/* Footer Container */
+/* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -183,44 +154,19 @@
   gap: 40px;
 }
 
-.footer-content {
-  flex: 1;
-}
-
-
-/* Mobile Responsiveness (Screen sizes below 768px) */
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .hero, .footer, .navbar {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
   }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-
   .hero-images, .footer-images {
     align-items: center;
     margin-top: 40px;
+    gap: 20px;
   }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
   .hero-btns, .footer-btns {
-    justify-content: center;
     flex-direction: column;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr; /* Stacks the stat cards */
-  }
-
-  .wide-green {
-    margin-top: 20px; /* Removes the negative margin overlap for mobile */
+    align-items: center;
   }
 }

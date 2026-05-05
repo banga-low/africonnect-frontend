@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // 1. Added useNavigate
 
 export default function SupplierSignup() {
   const [formData, setFormData] = useState({
@@ -9,13 +9,18 @@ export default function SupplierSignup() {
     password: ''
   });
 
+  const navigate = useNavigate(); // 2. Initialize the navigate hook
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Supplier signup:', formData);
+    console.log('Supplier signup successful:', formData);
+    
+    // 3. Trigger the route to the dashboard
+    navigate('/supplierdashboard'); 
   };
 
   return (

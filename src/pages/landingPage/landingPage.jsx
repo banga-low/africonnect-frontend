@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import the navigator
 import './landingPage.css';
 
 const LandingPage = () => {
+  const navigate = useNavigate(); // Initialize the hook
+
   return (
     <div className="landing-container">
       {/* 1. Navbar */}
@@ -14,7 +17,8 @@ const LandingPage = () => {
           <a href="#home">Home</a>
           <a href="#product">Product</a>
           <a href="#buy">Buy</a>
-          <button className="nav-search-btn">Search</button>
+          {/* Navigate to Login */}
+          <button className="nav-search-btn" onClick={() => navigate('/login')}>Login</button>
         </div>
       </nav>
 
@@ -30,7 +34,10 @@ const LandingPage = () => {
           </p>
           <div className="hero-btns">
             <button className="btn-primary">Search Materials</button>
-            <button className="btn-primary">Become a supplier</button>
+            {/* Navigate to Signup */}
+            <button className="btn-primary" onClick={() => navigate('/signup')}>
+               Become a supplier
+            </button>
           </div>
         </div>
         <div className="hero-images">
@@ -82,7 +89,7 @@ const LandingPage = () => {
         </ul>
       </section>
 
-      {/* 7. Footer Section (Mirroring Hero) */}
+      {/* 7. Footer Section */}
       <footer className="footer">
         <div className="footer-content">
           <h2 className="hero-title">
@@ -94,7 +101,9 @@ const LandingPage = () => {
           </p>
           <div className="footer-btns">
             <button className="btn-primary">Search Materials</button>
-            <button className="btn-primary">Become a supplier</button>
+            <button className="btn-primary" onClick={() => navigate('/signup')}>
+               Become a supplier
+            </button>
           </div>
         </div>
         <div className="footer-images">

@@ -4,11 +4,11 @@ import './landingPage.css';
 
 // Image Imports (Updated to .png)
 import cottonImg from '../../assets/LandingPage/cotton.png';
-import cocoaTree from '../../assets/LandingPage/cocoa tree.png';
+import cocoaTree from '../../assets/LandingPage/cocoa-tree.png';
 import sweater from '../../assets/LandingPage/sweater.png';
 import wool from '../../assets/LandingPage/wool.png';
-import woolTree from '../../assets/LandingPage/wool tree.png';
-import sheaButter from '../../assets/LandingPage/shea butter.png';
+import woolTree from '../../assets/LandingPage/wool-tree.png';
+import sheaButter from '../../assets/LandingPage/shea-butter.png';
 import cocoa from '../../assets/LandingPage/cocoa.png';
 
 const LandingPage = () => {

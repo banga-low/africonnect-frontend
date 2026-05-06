@@ -1,9 +1,12 @@
 import React from 'react';
-import { User, Box, Upload, CheckCircle, List, Bell, Search, LogOut } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { User, Box, Upload, CheckCircle, List, Bell, Search } from 'lucide-react';
 import './SupplierDashboard.css';
-import supplieravator from '../../assets/supplieravator.png'
+import supplieravator from '../../assets/supplieravator.png';
 
 const SupplierDashboard = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
   return (
     <div className="dashboard-container">
       {/* --- Navbar --- */}
@@ -46,10 +49,16 @@ const SupplierDashboard = () => {
           <h1 className="section-heading">Features</h1>
           
           <div className="feature-grid top-grid">
-            <div className="feature-card">
+            {/* Added onClick to trigger navigation to your new route */}
+            <div 
+              className="feature-card clickable" 
+              onClick={() => navigate('/supplier-set-profile')}
+              style={{ cursor: 'pointer' }}
+            >
               <User size={40} strokeWidth={1.5} />
               <p>Set Profile</p>
             </div>
+
             <div className="feature-card">
               <Box size={40} strokeWidth={1.5} />
               <p>Product listing</p>
@@ -81,4 +90,3 @@ const SupplierDashboard = () => {
 };
 
 export default SupplierDashboard;
-

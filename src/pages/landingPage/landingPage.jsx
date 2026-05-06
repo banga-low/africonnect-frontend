@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './landingPage.css';
 
 // Image Imports (Updated to .png)
+import heroImg from '../../assets/LandingPage/hero-image.jpeg'
 import cottonImg from '../../assets/LandingPage/cotton.png';
 import cocoaTree from '../../assets/LandingPage/cocoa-tree.png';
-import sweater from '../../assets/LandingPage/sweater.png';
-import wool from '../../assets/LandingPage/wool.png';
+import sweater from '../../assets/LandingPage/sweater.jpeg';
+import wool from '../../assets/LandingPage/wool.jpeg';
 import woolTree from '../../assets/LandingPage/wool-tree.png';
 import sheaButter from '../../assets/LandingPage/shea-butter.png';
 import cocoa from '../../assets/LandingPage/cocoa.png';
@@ -39,7 +40,7 @@ const LandingPage = () => {
       {/* 2. Hero Section */}
       <header 
         className="hero" 
-        style={{ backgroundImage: `url(${cottonImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: `url(${heroImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="hero-content">
           <h2 className="hero-title">

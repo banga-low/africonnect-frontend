@@ -99,12 +99,7 @@ const LandingPage = () => {
         <p className="lorem-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
-        <ul className="check-list">
-          <li>Verified supplier network</li>
-          <li>Lower sourcing cost</li>
-          <li>Cross-border access</li>
-          <li>Faster procurement</li>
-        </ul>
+        
       </section>
 
       {/* 7. Why Choose Africonnect */}

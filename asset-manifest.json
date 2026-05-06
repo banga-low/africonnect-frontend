@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/css/main.b301f919.css",
+    "main.js": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/js/main.9cd311c0.js",
+    "static/js/453.0d42d296.chunk.js": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/js/453.0d42d296.chunk.js",
+    "static/media/wool-tree.png": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/wool-tree.251ca1f9988dd4d9a00f.png",
+    "static/media/cocoa.png": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/cocoa.b8abf2c3073aa16c7b4a.png",
+    "static/media/cocoa-tree.png": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/cocoa-tree.e2ef99a7dde2a9f9db67.png",
+    "static/media/cotton.png": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/cotton.23d8425130555e425aca.png",
+    "static/media/shea-butter.png": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/shea-butter.c597235af9c89fb2fe49.png",
+    "static/media/sweater.jpeg": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/sweater.3815196e6899b0763fee.jpeg",
+    "static/media/wool.jpeg": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/wool.13834afd0a2ec27e1db1.jpeg",
+    "static/media/hero-image.jpeg": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/hero-image.d76b71ab53f18e105aa6.jpeg",
+    "static/media/supplieravator.png": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/media/supplieravator.7acdc06e5601cf9970a7.png",
+    "index.html": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/index.html",
+    "main.b301f919.css.map": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/css/main.b301f919.css.map",
+    "main.9cd311c0.js.map": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/js/main.9cd311c0.js.map",
+    "453.0d42d296.chunk.js.map": "/[https://banga-low.github.io/africonnect-frontend](https://banga-low.github.io/africonnect-frontend)/static/js/453.0d42d296.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b301f919.css",
+    "static/js/main.9cd311c0.js"
+  ]
+}

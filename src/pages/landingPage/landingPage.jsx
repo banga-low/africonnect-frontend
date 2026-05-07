@@ -1,7 +1,26 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import './landingPage.css';
 
+// Image Imports (Updated to .png)
+import heroImg from '../../assets/LandingPage/hero-image.jpeg'
+import cottonImg from '../../assets/LandingPage/cotton.png';
+import cocoaTree from '../../assets/LandingPage/cocoa-tree.png';
+import sweater from '../../assets/LandingPage/sweater.jpeg';
+import wool from '../../assets/LandingPage/wool.jpeg';
+import woolTree from '../../assets/LandingPage/wool-tree.png';
+import sheaButter from '../../assets/LandingPage/shea-butter.png';
+import cocoa from '../../assets/LandingPage/cocoa.png';
+
 const LandingPage = () => {
+  const navigate = useNavigate(); 
+
+  const popularMaterials = [
+    { name: 'shea butter', img: sheaButter },
+    { name: 'cocoa', img: cocoa },
+    { name: 'cotton', img: cottonImg }
+  ];
+
   return (
     <div className="landing-container">
       {/* 1. Navbar */}
@@ -14,12 +33,15 @@ const LandingPage = () => {
           <a href="#home">Home</a>
           <a href="#product">Product</a>
           <a href="#buy">Buy</a>
-          <button className="nav-search-btn">Search</button>
+          <button className="nav-search-btn" onClick={() => navigate('/login')}>Login</button>
         </div>
       </nav>
 
       {/* 2. Hero Section */}
-      <header className="hero">
+      <header 
+        className="hero" 
+        style={{ backgroundImage: `url(${heroImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
         <div className="hero-content">
           <h2 className="hero-title">
             Source Raw materials Across <span className="text-green">Africa,</span><br />
@@ -30,16 +52,15 @@ const LandingPage = () => {
           </p>
           <div className="hero-btns">
             <button className="btn-primary">Search Materials</button>
-            <button className="btn-primary">Become a supplier</button>
+            {/* Added spacer class for the gap */}
+            <button className="btn-primary btn-spacer" onClick={() => navigate('/signup')}>
+               Become a supplier
+            </button>
           </div>
-        </div>
-        <div className="hero-images">
-          <div className="placeholder-img tall-green"></div>
-          <div className="placeholder-img wide-green"></div>
         </div>
       </header>
 
-      {/* 3. Statistics Section */}
+      {/* 3. Statistics Section (Restored to original size) */}
       <section className="stats-grid">
         <div className="stat-card">5000+ Suppliers</div>
         <div className="stat-card">20+ African countries</div>
@@ -47,42 +68,53 @@ const LandingPage = () => {
         <div className="stat-card">Transparent Pricing</div>
       </section>
 
-      {/* 4. Popular Materials Section */}
+      {/* 4. Sourcing Materials (Huddle Section) */}
+      <section className="sourcing-huddle">
+        <div className="huddle-text">
+          <h3>Sourcing <span className="text-green">raw</span> materials shouldn't be a hurdle</h3>
+        </div>
+        <div className="huddle-grid">
+          <img src={cocoaTree} alt="Cocoa tree" className="huddle-img" />
+          <img src={sweater} alt="Sweater" className="huddle-img" />
+          <img src={wool} alt="Wool" className="huddle-img" />
+          <img src={woolTree} alt="Wool tree" className="huddle-img" />
+        </div>
+      </section>
+
+      {/* 5. Popular Materials Section */}
       <section className="materials-section">
-        <h3 className="section-title">popular materials on Africonnect</h3>
+        <h3 className="section-title">Popular materials on Africonnect</h3>
         <div className="material-list">
-          {['cocoa', 'cotton', 'shea butter'].map((item) => (
-            <div key={item} className="material-item">
-              <span>{item}</span>
-              <div className="placeholder-img blue-box"></div>
+          {popularMaterials.map((item) => (
+            <div key={item.name} className="material-item">
+              <img src={item.img} alt={item.name} className="material-thumb" />
+              <span className="material-name">{item.name.toUpperCase()}</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 5. About Us Section */}
+      {/* 6. About Africonnect */}
       <section className="info-section">
         <h3 className="section-title">About <span className="text-green">Africonnect</span></h3>
-        <ul className="check-list">
-          <li>Verified supplier network</li>
-          <li>lower sourcing cost</li>
-          <li>cross-border access</li>
-          <li>faster procurement</li>
-        </ul>
+        <p className="lorem-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        
       </section>
 
-      {/* 6. Why Choose Us Section */}
+      {/* 7. Why Choose Africonnect */}
       <section className="info-section">
-        <h3 className="section-title">why choose <span className="text-green">Africonnect</span></h3>
+        <h3 className="section-title">Why choose <span className="text-green">Africonnect</span></h3>
         <ul className="check-list">
           <li>Verified supplier network</li>
-          <li>lower sourcing cost</li>
-          <li>cross-border access</li>
-          <li>faster procurement</li>
+          <li>Lower sourcing cost</li>
+          <li>Cross-border access</li>
+          <li>Faster procurement</li>
         </ul>
       </section>
 
-      {/* 7. Footer Section (Mirroring Hero) */}
+      {/* 8. Footer Section */}
       <footer className="footer">
         <div className="footer-content">
           <h2 className="hero-title">
@@ -94,12 +126,10 @@ const LandingPage = () => {
           </p>
           <div className="footer-btns">
             <button className="btn-primary">Search Materials</button>
-            <button className="btn-primary">Become a supplier</button>
+            <button className="btn-primary btn-spacer" onClick={() => navigate('/signup')}>
+               Become a supplier
+            </button>
           </div>
-        </div>
-        <div className="footer-images">
-          <div className="placeholder-img tall-green"></div>
-          <div className="placeholder-img wide-green"></div>
         </div>
       </footer>
     </div>

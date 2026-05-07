@@ -1,11 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { User, Box, Upload, CheckCircle, List, Bell, Search } from 'lucide-react';
 import './SupplierDashboard.css';
 import supplieravator from '../../assets/supplieravator.png';
+import '../../components/ProductListing/ProductListing'
 
 const SupplierDashboard = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate(); 
 
   return (
     <div className="dashboard-container">
@@ -59,7 +60,11 @@ const SupplierDashboard = () => {
               <p>Set Profile</p>
             </div>
 
-            <div className="feature-card">
+            <div
+             className="feature-card"
+             onClick={() => navigate('/product-listing')}
+             style={{ cursor: 'pointer' }}
+             >
               <Box size={40} strokeWidth={1.5} />
               <p>Product listing</p>
             </div>
